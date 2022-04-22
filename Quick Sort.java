@@ -4,7 +4,7 @@ public class QuickSort {
 
     public static void main(String[] args) {
 
-        int[] array = {18290, 21567, 1267, 6, 1096739012, 671};
+        int[] array = {18290, 21567, 1267, 6, 1096739012, 671}; // Demo array
         int length = array.length;
 
         System.out.println("Current Array: " + Arrays.toString(array) + "\n");

@@ -7,6 +7,8 @@ public static void main(String[] args) throws Exception {
         System.out.println(f[0]);
     }
 
+
+// Calculate the nth Fibonacci Number using a O(log (n)) algorithm
 static void FastDoubling(long n, long f[]) {
         long a, b, c, d, MOD = 1000000007;
         if (n == 0) {f[0] = 0;f[1] = 1;return;}

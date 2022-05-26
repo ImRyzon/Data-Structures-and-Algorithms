@@ -6,7 +6,7 @@ static int dis[][] = new int[9][9], endX, endY, ROW = 8, COL = 8;
 static Integer vectorX[] = {-1, -2, -2, -1, 1, 2, 1, 2};
 static Integer vectorY[] = {-2, -1, 1, 2, -2, -1, 2, 1};
 
-static class bfs (int x, int y) {
+public class bfs (int x, int y) {
         Queue<Pair> q = new LinkedList<>();
         q.add(new Pair(x, y));
         vis[x][y] = true;

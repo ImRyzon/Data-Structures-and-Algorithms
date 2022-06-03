@@ -12,6 +12,7 @@ public class BFS {
             for(int v : adj[u]) {
                 if(!vis[v]) {
                     q.add(v);
+                    vis[v] = true;
                 }
             }
         }

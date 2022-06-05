@@ -11,10 +11,9 @@ public class bfs (int x, int y) {
         q.add(new Pair(x, y));
         vis[x][y] = true;
         while (!q.isEmpty()) {
-            Pair cell = q.peek();
+            Pair cell = q.poll();
             int a = cell.first, b = cell.second;
             if (a == endX && b == endY) return;
-            q.remove();
             for (int i = 0; i < 8; i++) {
                 int adjA = a + vectorX[i], adjB = b + vectorY[i];
                 if (isValid(adjA, adjB)) {

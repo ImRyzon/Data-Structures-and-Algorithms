@@ -1,13 +1,11 @@
 import java.io.*;
 import java.util.*;
-
 public class Main {
         public static void main(String[] args) throws Exception {
         long n = r.readLong(), f[] = new long[2];
         FastDoubling(n, f);
         System.out.println(f[0]);
-         }
-
+        }
 
         // Calculate the nth Fibonacci Number using a O(log (n)) algorithm
         static void FastDoubling(long n, long f[]) {
@@ -19,6 +17,5 @@ public class Main {
                 c = (a * c) % MOD; d = (a * a + b * b) % MOD;
                 if (n % 2 == 0) {f[0] = c;f[1] = d;}
                 else {f[0] = d;f[1] = c + d;}
-        }
-        
+        }   
 }

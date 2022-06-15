@@ -1,6 +1,7 @@
 import java.io.*;
 import java.util.*;
 public class Main {
+        static long MOD = 1000000007;
         public static void main(String[] args) throws Exception {
         long n = r.readLong(), f[] = new long[2];
         FastDoubling(n, f);
@@ -9,7 +10,7 @@ public class Main {
 
         // Calculate the nth Fibonacci Number using a O(log (n)) algorithm
         static void FastDoubling(long n, long f[]) {
-                long a, b, c, d, MOD = 1000000007;
+                long a, b, c, d;
                 if (n == 0) {f[0] = 0;f[1] = 1;return;}
                 FastDoubling((n / 2), f);
                 a = f[0];b = f[1];c = 2 * b - a;

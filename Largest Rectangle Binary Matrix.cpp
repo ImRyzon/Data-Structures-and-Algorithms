@@ -30,6 +30,7 @@ void solve() {
             cin >> grid[r][c];
             if (r == 0) dp[c] = 0;
             dp[c] = (grid[r][c] == 0 ? 0 : dp[c] + 1);
+            // Largest rectangle in a 2D histogram algorithm
             while (!s.empty() && dp[s.top()] > dp[c]) {
                 int top = s.top(); s.pop();
                 ans = max(ans, s.empty() ? dp[top] * c : dp[top] * (c - s.top() - 1));

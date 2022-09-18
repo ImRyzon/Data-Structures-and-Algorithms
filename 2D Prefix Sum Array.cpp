@@ -1,25 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
-
-#define ll long long
-#define ld long double
-#define ull unsigned long long
-#define vt vector
-#define pii pair<int, int>
-#define pll pair<long, long>
-#define pb push_back
-#define eb emplace_back
-#define emp emplace
-#define popf pop_front
-#define popb pop_back
-#define mp make_pair
-#define umap unordered_map
-#define fill(x, a) memset(x, a, sizeof(x))
-#define all(c) (c).begin(), (c).end()
-
 const int MM = 5002;
-ll arr[MM][MM];
-
+long long arr[MM][MM];
 void solve() {
     int n, m, k, q;
     cin >> n >> m >> k;

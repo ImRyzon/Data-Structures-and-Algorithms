@@ -1,7 +1,9 @@
 #include <bits/stdc++.h>
 using namespace std;
+
 const int MM = 5002;
 long long arr[MM][MM];
+
 void solve() {
     int n, m, k, q;
     cin >> n >> m >> k;

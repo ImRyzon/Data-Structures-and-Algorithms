@@ -1,27 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-#define int long long
-#define ld long double
-#define ull unsigned long long
-#define vt vector
-#define pii pair<int, int>
-#define pll pair<ll, ll>
-#define pb push_back
-#define pf push_front
-#define ef emplace_front
-#define eb emplace_back
-#define emp emplace
-#define popf pop_front
-#define popb pop_back
-#define mp make_pair
-#define umap unordered_map
-#define uset unordered_set
-#define fill(x, a) memset(x, a, sizeof(x))
-#define all(c) (c).begin(), (c).end()
-#define sizeArr(t) (sizeof(t)/sizeof((t)[0]))
-#define ell '\n'
-
 struct ConvexHullTrick {
     struct Line {
         int slope, yIntercept;

@@ -32,12 +32,12 @@ struct ConvexHullTrick {
     deque<pair<Line, int>> dq;
     void insert(int slope, int yIntercept) {
         Line newLine(slope, yIntercept);
-        while (dq.size() > 1 && dq.back().second >= dq.back().first.intersect(newLine)) dq.popb();
-        if (dq.empty()) {dq.eb(newLine, 0); return;}
-        dq.eb(newLine, dq.back().first.intersect(newLine));
+        while (dq.size() > 1 && dq.back().second >= dq.back().first.intersect(newLine)) dq.pop_back();
+        if (dq.empty()) {dq.emplace_back(newLine, 0); return;}
+        dq.emplace_back(newLine, dq.back().first.intersect(newLine));
     }
     int query(int x) {
-        while (dq.size() > 1) {if (dq[1].second <= x) dq.popf(); else break;}
+        while (dq.size() > 1) {if (dq[1].second <= x) dq.pop_front(); else break;}
         return dq[0].first.val(x);
     }
 };

@@ -1,7 +1,6 @@
 const int MM = 1e6;
-bool vis[MM];
 
-void dijkstra(int start, int dis[]) {
+void dijkstra(int start, int dis[MM], bool vis[MM];) {
     for (int i = 0; i < MM; i++) {
         vis[i] = false;
         dis[i] = 0x3F3F3F3F;

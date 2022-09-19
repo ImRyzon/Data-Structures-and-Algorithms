@@ -1,3 +1,6 @@
+const int MM = 1e6;
+bool vis[MM];
+
 void dijkstra(int start, int dis[]) {
     for (int i = 0; i < MM; i++) {
         vis[i] = false;

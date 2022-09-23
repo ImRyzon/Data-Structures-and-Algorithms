@@ -11,7 +11,8 @@ typedef pair<int, int> pii;
 typedef pair<long long, long long> pll;
 
 const int MM = 5e4 + 1;
-int mx[MM][17], mi[MM][17];
+const int LOG = 17;
+int mx[MM][LOG], mi[MM][LOG];
 
 int queryMin(int L, int R) {
     int k = floor(log2(R - L + 1));
@@ -36,7 +37,7 @@ signed main() {
     }
 
     // Preprocess
-    for (int k = 1; k < 17; k++) {
+    for (int k = 1; k < LOG; k++) {
         for (int i = 0; i + (1 << k) - 1 < N; i++) {
             mi[i][k] = min(mi[i][k-1], mi[i + (1 << (k-1))][k-1]);
             mx[i][k] = max(mx[i][k-1], mx[i + (1 << (k-1))][k-1]);

@@ -36,7 +36,7 @@ signed main() {
         mi[i][0] = mx[i][0];
     }
 
-    // Preprocess
+    // Pre-process
     for (int k = 1; k < LOG; k++) {
         for (int i = 0; i + (1 << k) - 1 < N; i++) {
             mi[i][k] = min(mi[i][k-1], mi[i + (1 << (k-1))][k-1]);

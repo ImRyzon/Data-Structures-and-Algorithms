@@ -50,6 +50,10 @@ void dijkstra(int start) {
         }
     }
     for (int i = 1; i <= N; i++) {
+        if (dis[i] == 0x3F3F3F3F) {
+            cout << "There is no path from 1 --> " << i << '\n';
+            continue;
+        }
         cout << "The shortest distance from 1 --> " << i << " is: " << dis[i] << '\n';
     }
 }

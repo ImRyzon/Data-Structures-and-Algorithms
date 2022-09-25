@@ -29,10 +29,8 @@ bool vis[MM];
 
 void Prim() {
     priority_queue<pair<int, int>, vector<pair<int, int>>, greater<pair<int, int>>> pq;
-    for (int i = 1; i <= N; i++) {
-        vis[i] = false;
-        dis[i] = INT_MAX;
-    }
+    fill(vis, vis + N + 1, false);
+    fill(dis, dis + N + 1, INT_MAX);
     dis[1] = 0;
     pq.push({dis[1], 1});
     int sum = 0;

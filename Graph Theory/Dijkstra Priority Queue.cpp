@@ -29,7 +29,7 @@ bool vis[MM];
 
 void dijkstra(int start) {
     fill(vis, vis + N + 1, false);
-    fill(dis, dis + N + 1, INT_MAX);
+    fill(dis, dis + N + 1, 0x3F3F3F3F);
     priority_queue<pair<int, int>, vector<pair<int, int>>, greater<pair<int, int>>> pq;
     dis[start] = 0;
     pq.push({dis[start], start});

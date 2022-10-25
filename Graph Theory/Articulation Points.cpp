@@ -1,3 +1,6 @@
+/**
+ * Find articulation points in a graph using Tarjan's algorithm
+ */
 #include <bits/stdc++.h>
 using namespace std;
 #pragma GCC optimize ("Ofast","unroll-loops","omit-frame-pointer","inline")

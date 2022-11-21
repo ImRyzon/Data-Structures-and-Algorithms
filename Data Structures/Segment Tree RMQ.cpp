@@ -18,7 +18,8 @@ void build(int l, int r, int idx) {
         return;
     }
     int mid = (l + r) / 2;
-    build(l, mid, 2 * idx); build(mid + 1, r, 2 * idx + 1);
+    build(l, mid, 2 * idx); 
+    build(mid + 1, r, 2 * idx + 1);
     pushup(idx);
 }
 

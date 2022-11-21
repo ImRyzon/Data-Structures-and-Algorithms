@@ -44,7 +44,7 @@ signed main() {
     ios_base::sync_with_stdio(false);
     cin.tie(nullptr), cout.tie(nullptr);
     cin >> N >> M;
-    build(0, N-1, 1);
+    build(0, N - 1, 1);
     for (int i = 1, x, y; i <= M; i++) {
         cin >> op >> x >> y;
         // M: update element at index x to be y

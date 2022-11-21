@@ -6,7 +6,7 @@ struct Node {int l, r, val;} tree[3 * MM];
 int N, M;
 char op;
 
-void pushup(int idx) {
+void pushUp(int idx) {
     tree[idx].val = min(tree[2 * idx].val, tree[2 * idx + 1].val);
 }
 
@@ -20,7 +20,7 @@ void build(int l, int r, int idx) {
     int mid = (l + r) / 2;
     build(l, mid, 2 * idx); 
     build(mid + 1, r, 2 * idx + 1);
-    pushup(idx);
+    pushUp(idx);
 }
 
 void update(int pos, int val, int idx) {
@@ -30,7 +30,7 @@ void update(int pos, int val, int idx) {
     }
     int mid = (tree[idx].l + tree[idx].r) / 2;
     pos <= mid ? update(pos, val, 2 * idx) : update(pos, val, 2 * idx + 1);
-    pushup(idx);
+    pushUp(idx);
 }
 
 int queryMin(int l, int r, int idx) {

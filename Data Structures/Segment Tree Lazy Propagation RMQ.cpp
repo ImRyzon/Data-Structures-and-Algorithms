@@ -8,6 +8,7 @@ int N, Q;
 void pushUp(int idx) {
     segTree[idx].val = min(segTree[2 * idx].val, segTree[2 * idx + 1].val);
 }
+
 void pushDownVal(int idx) {
     int leftSon = 2 * idx, rightSon = 2 * idx + 1;
     segTree[leftSon].val = segTree[idx].lazyVal;

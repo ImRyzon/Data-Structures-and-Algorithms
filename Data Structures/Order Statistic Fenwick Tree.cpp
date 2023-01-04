@@ -1,6 +1,8 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+// Reference problem: https://dmoj.ca/problem/cco10p3
+
 /**
 * Query Types:
 *

@@ -25,10 +25,8 @@ typedef pair<long long, long long> pll;
 const int MM = 1e6 + 1;
 vector<pair<int, int>> adj[MM];
 int dis[MM], N, M;
-bool vis[MM];
 
 void dijkstra(int start) {
-    fill(vis, vis + N + 1, false);
     fill(dis, dis + N + 1, 0x3F3F3F3F);
     priority_queue<pair<int, int>, vector<pair<int, int>>, greater<pair<int, int>>> pq;
     dis[start] = 0;
@@ -36,16 +34,13 @@ void dijkstra(int start) {
     while (!pq.empty()) {
         pair<int, int> x = pq.top();
         pq.pop();
-        if (!vis[x.second]) {
-            vis[x.second] = true;
-            for (auto &e : adj[x.second]) {
+        for (auto &e : adj[x.second]) {
                 int v = e.first, w = e.second;
-                if (!vis[v] && dis[x.second] + w < dis[v]) {
+                if (dis[x.second] + w < dis[v]) {
                     dis[v] = dis[x.second] + w;
                     pq.push({dis[v], v});
                 }
             }
-        }
     }
     for (int i = 1; i <= N; i++) {
         if (dis[i] == 0x3F3F3F3F) {
